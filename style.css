@@ -1,0 +1,404 @@
+body {
+  background-color: #debb69;
+  background-image: linear-gradient(45deg, #d4aa59 8%, transparent 8%, transparent 92%, #d4aa59 92%), linear-gradient(-45deg, #d4aa59 8%, transparent 8%, transparent 92%, #d4aa59 92%);
+  background-size: 30px 30px;
+}
+
+/* Style untuk about section dengan card design */
+#about {
+  position: relative;
+  padding: 60px 0;
+}
+
+/* Style untuk container about */
+#about .container {
+  position: relative;
+}
+
+/* Style untuk judul about */
+#about-louis {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+#about-louis::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, #debb69, transparent);
+}
+
+/* Style untuk card about */
+.about-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border: 1px solid rgba(222, 187, 105, 0.3);
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Style untuk paragraf dalam about */
+.about-card p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Style untuk biodata */
+.biodata {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border: 1px solid rgba(222, 187, 105, 0.3);
+}
+
+.biodata:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Style untuk item biodata */
+.bio-item {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  transition: 0.3s;
+}
+
+.bio-item:hover {
+  background-color: #fff;
+  transform: translateX(5px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.bio-item strong {
+  display: block;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+/* Style untuk social links */
+.social-links {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border: 1px solid rgba(222, 187, 105, 0.3);
+  text-align: center;
+}
+
+.social-links:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 50%;
+  color: #333;
+  background-color: #f8f9fa;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #debb69;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .about-card,
+  .biodata,
+  .social-links {
+    padding: 20px;
+  }
+
+  .bio-item {
+    padding: 10px;
+  }
+}
+
+#sidebar {
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: linear-gradient(145deg, #1f1f1f, #2a2a2a);
+  padding-top: 20px;
+  z-index: 1000;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+#home {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/19742.jpg); /* Ganti dengan path gambar Anda */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(5px); /* Atur tingkat blur di sini */
+  transform: scale(1.1); /* Menghindari tepi blur */
+}
+
+/* Menambahkan overlay gelap agar teks lebih mudah dibaca */
+.bg-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Atur tingkat kegelapan di sini */
+}
+
+.nav-link {
+  color: white;
+  padding: 15px 30px;
+  transition: 0.3s;
+  border-left: 3px solid transparent;
+}
+
+.nav-link:hover {
+  background-color: #495057;
+  border-left: 3px solid #debb69;
+  transform: translateX(5px);
+}
+
+.section {
+  min-height: 100vh;
+  padding: 80px 0;
+  position: relative;
+}
+
+/* Decorative corner ornaments */
+.section::before,
+.section::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(222, 187, 105, 0.3);
+}
+
+.section::before {
+  top: 20px;
+  left: 20px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.section::after {
+  bottom: 20px;
+  right: 20px;
+  border-left: none;
+  border-top: none;
+}
+
+.social-icon {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #343a40;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #debb69;
+}
+
+.education-item,
+.experience-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border: 1px solid rgba(222, 187, 105, 0.3);
+}
+
+.education-item:hover,
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.portfolio-item img {
+  transition: 0.5s;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.contact-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(222, 187, 105, 0.1), transparent);
+  transform: rotate(45deg);
+  animation: formShine 3s infinite;
+}
+
+@keyframes formShine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #debb69;
+  border-radius: 5px;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(100px, 100px) rotate(360deg);
+  }
+}
+
+/* Profile image enhancement */
+#sidebar img.rounded-circle {
+  border: 3px solid #debb69;
+  padding: 3px;
+  transition: 0.3s;
+}
+
+#sidebar img.rounded-circle:hover {
+  transform: scale(1.1);
+}
+
+/* Section headers decoration */
+.section h2 {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, #debb69, transparent);
+}
+
+/* Biodata styling yang sudah ada */
+.bio-item {
+  margin-bottom: 15px;
+}
+
+.bio-item strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #333;
+  font-weight: 600;
+}
+
+.bio-item span {
+  display: block;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .bio-item {
+    margin-bottom: 20px;
+  }
+}
+
+.bio-item {
+  margin-bottom: 15px;
+}
+
+.bio-item strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #333;
+  font-weight: 600;
+}
+
+.bio-item span {
+  display: block;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .bio-item {
+    margin-bottom: 20px;
+  }
+}
