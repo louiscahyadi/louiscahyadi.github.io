@@ -13,7 +13,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#home"> WIZZMAAN </a>
+        <a class="navbar-brand" href="#home" style="color: #ffffff"> WIZZMAAN </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -56,7 +56,7 @@
           <div class="row align-items-center">
             <div class="col-md-6">
               <h1 class="display-4">Hi, I'm Louis</h1>
-              <p class="lead">Selamat datang di situs web portofolio saya tempat saya memamerkan perjalanan, keterampilan, dan pencapaian saya.</p>
+              <p class="lead" style="color: #ffffff">Selamat datang di situs web portofolio saya tempat saya memamerkan perjalanan, keterampilan, dan pencapaian saya.</p>
               <a href="document/CV-Delon Louis Cahyadi Tarra.pdf" class="btn btn-primary mt-3">📃Download CV</a>
             </div>
             <div class="col-md-6 text-center">
@@ -75,20 +75,18 @@
               <img src="/img/FotoSaya2.png" alt="About Louis" class="about-img img-fluid mb-4" style="max-width: 400px" />
             </div>
             <div class="col-md-6">
-              <p>Saya merupakan seorang Mahasiswa dari Program Studi Sistem Informasi, Jurusan Teknik Informatika, Fakultas Teknik dan Kejuruan, Universitas Pendidikan Ganesha, Bali, Indonesia.</p>
-              <div class="row mt-4">
-                <div class="col-md-6">
-                  <p><strong>Agama:</strong> Kristen Protestan</p>
-                  <p><strong>Jenis Kelamin:</strong> Laki-laki</p>
-                  <p><strong>Tanggal Lahir:</strong> 19 November 2004</p>
-                  <p><strong>Status:</strong> Mahasiswa</p>
-                </div>
-                <div class="col-md-6">
-                  <p><strong>No HP:</strong> +62 812 4613 6464</p>
-                  <p><strong>Email:</strong> loouis1911@gmail.com</p>
-                  <p><strong>Alamat:</strong> Banjar Dinas Babakan, Desa Panji, Kecamatan Sukasada, Kabupaten Buleleng, Bali, Indonesia</p>
-                  <p><strong>Freelance:</strong> Available</p>
-                </div>
+              <p class="personal-info" style="color: #ffffff !important">
+                Saya merupakan seorang Mahasiswa dari Program Studi Sistem Informasi, Jurusan Teknik Informatika, Fakultas Teknik dan Kejuruan, Universitas Pendidikan Ganesha, Bali, Indonesia.
+              </p>
+              <div class="personal-info" style="color: #ffffff !important">
+                <p style="color: #ffffff !important"><strong style="color: #ffffff !important">Agama:</strong> Kristen Protestan</p>
+                <p style="color: #ffffff !important"><strong style="color: #ffffff !important">Jenis Kelamin:</strong> Laki-laki</p>
+                <p style="color: #ffffff !important"><strong style="color: #ffffff !important">Tanggal Lahir:</strong> 19 November 2004</p>
+                <p style="color: #ffffff !important"><strong style="color: #ffffff !important">Status:</strong> Mahasiswa</p>
+                <p style="color: #ffffff !important"><strong style="color: #ffffff !important">No HP:</strong> +62 812 4613 6464</p>
+                <p style="color: #ffffff !important"><strong style="color: #ffffff !important">Email:</strong> loouis1911@gmail.com</p>
+                <p style="color: #ffffff !important"><strong style="color: #ffffff !important">Alamat:</strong> Banjar Dinas Babakan, Desa Panji, Kecamatan Sukasada, Kabupaten Buleleng, Bali, Indonesia</p>
+                <p style="color: #ffffff !important"><strong style="color: #ffffff !important">Freelance:</strong> Available</p>
               </div>
             </div>
           </div>
@@ -101,7 +99,7 @@
           <h2 class="text-center mb-5">Education</h2>
           <div class="row">
             <div class="col-md-6 mb-4">
-              <div class="card">
+              <div class="card education-card">
                 <img src="/img/SD.jpg" alt="SD Katolik Karya" class="card-img-top education-img" />
                 <div class="card-body">
                   <h5 class="card-title">SD Katolik Karya Singaraja (2011 - 2014)</h5>
@@ -178,50 +176,99 @@
       <!-- Portfolio Section -->
       <section id="portfolio">
         <div class="container">
-          <h2 class="text-center mb-5">Portfolio</h2>
-          <div class="row">
-            <div class="col-md-4 portfolio-item">
+          <h2 class="text-center mb-5">My Portfolio</h2>
+          <div class="row g-4">
+            <!-- Portfolio Item 1 -->
+            <div class="col-md-4">
               <div class="portfolio-card">
-                <img src="/img/Exp1.png" alt="Portfolio 1" class="img-fluid" />
-                <div class="portfolio-overlay">
-                  <h5>Project 1</h5>
-                  <p>Click to view details</p>
+                <div class="portfolio-image">
+                  <img src="/img/Exp1.png" alt="UI/UX Design" class="img-fluid" />
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-content">
+                      <span class="portfolio-category">UI/UX Design</span>
+                      <h3>✨UI/UX Designer</h3>
+                      <div class="portfolio-icons">
+                        <i class="fab fa-figma"></i>
+                      </div>
+                      <button class="btn btn-view" data-project="1">View Details</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 portfolio-item">
+
+            <!-- Portfolio Item 2 -->
+            <div class="col-md-4">
               <div class="portfolio-card">
-                <img src="/img/Exp2.png" alt="Portfolio 2" class="img-fluid" />
-                <div class="portfolio-overlay">
-                  <h5>Project 2</h5>
-                  <p>Click to view details</p>
+                <div class="portfolio-image">
+                  <img src="/img/Exp2.png" alt="Thumbnail Design" class="img-fluid" />
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-content">
+                      <span class="portfolio-category">Graphic Design</span>
+                      <h3>✏️Youtube Thumbnail Editor</h3>
+                      <div class="portfolio-icons">
+                        <i class="fab fa-canva"></i>
+                      </div>
+                      <button class="btn btn-view" data-project="2">View Details</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 portfolio-item">
+
+            <!-- Portfolio Item 3 -->
+            <div class="col-md-4">
               <div class="portfolio-card">
-                <img src="/img/Exp3.png" alt="Portfolio 3" class="img-fluid" />
-                <div class="portfolio-overlay">
-                  <h5>Project 3</h5>
-                  <p>Click to view details</p>
+                <div class="portfolio-image">
+                  <img src="/img/Exp3.png" alt="Video Editing" class="img-fluid" />
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-content">
+                      <span class="portfolio-category">Video Editing</span>
+                      <h3>🎥Video Editor</h3>
+                      <div class="portfolio-icons">
+                        <i class="fas fa-video"></i>
+                      </div>
+                      <button class="btn btn-view" data-project="3">View Details</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 portfolio-item">
+
+            <!-- Portfolio Item 4 -->
+            <div class="col-md-4">
               <div class="portfolio-card">
-                <img src="/img/Exp4.png" alt="Portfolio 4" class="img-fluid" />
-                <div class="portfolio-overlay">
-                  <h5>Project 4</h5>
-                  <p>Click to view details</p>
+                <div class="portfolio-image">
+                  <img src="/img/Exp4.png" alt="Fast Typing" class="img-fluid" />
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-content">
+                      <span class="portfolio-category">Skills</span>
+                      <h3>⌨️Fast Typing 90WPM🔥</h3>
+                      <div class="portfolio-icons">
+                        <i class="fas fa-keyboard"></i>
+                      </div>
+                      <button class="btn btn-view" data-project="4">View Details</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 portfolio-item">
+
+            <!-- Portfolio Item 5 -->
+            <div class="col-md-4">
               <div class="portfolio-card">
-                <img src="/img/Exp5.png" alt="Portfolio 5" class="img-fluid" />
-                <div class="portfolio-overlay">
-                  <h5>Project 5</h5>
-                  <p>Click to view details</p>
+                <div class="portfolio-image">
+                  <img src="/img/Exp5.png" alt="Video Editing" class="img-fluid" />
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-content">
+                      <span class="portfolio-category">Video Editing</span>
+                      <h3>🎥Video Editor</h3>
+                      <div class="portfolio-icons">
+                        <i class="fas fa-video"></i>
+                      </div>
+                      <button class="btn btn-view" data-project="5">View Details</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

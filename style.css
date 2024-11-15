@@ -1,627 +1,398 @@
-.navbar-social a {
-  margin-left: 15px;
-  color: #333;
-}
-.navbar-social a:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
-section {
-  padding: 100px 0;
-  background-color: #1f1f1f;
-  color: #f4f4f9;
-}
-.hero-section,
-#education,
-#portfolio {
-  background-color: #1f1f1f;
-  color: #f4f4f9;
-  padding: 100px 0;
-}
-.hero-section h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-.hero-section p {
-  font-size: 1.25rem;
-}
-.about-img,
-.profile-img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin: 0 auto;
-  display: block;
-}
-.education-img {
-  max-width: 100%;
-  border-radius: 5px;
-  margin: 0 auto;
-  display: block;
-}
-.experience-card {
-  margin-bottom: 30px;
-}
-.experience-card img {
-  max-width: 100%;
-  border-radius: 5px;
-  margin: 0 auto;
-  display: block;
-}
-.portfolio-item {
-  cursor: pointer;
-  padding: 15px;
-  border: 1px solid #ddd;
-  transition: transform 0.3s, box-shadow 0.3s;
+/* Warna dasar */
+:root {
+  --primary: #384359;
+  --secondary: #d5dce6;
+  --dark: #2d364d;
+  --light: #e8ecf2;
 }
 
-.portfolio-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-content {
-  background-color: #2a2a2a;
-  color: #f4f4f9;
-  margin: 15% auto;
-  padding: 20px;
-  width: 70%;
-}
-.contact-info i {
-  font-size: 24px;
-  margin-right: 10px;
-}
-
-/* tyles untuk portfolio */
-.portfolio-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  margin-bottom: 30px;
-}
-
-.portfolio-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(164, 31, 40, 0.9);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-.portfolio-card:hover .portfolio-overlay {
-  opacity: 1;
-}
-
-.modal {
-  z-index: 1050;
-}
-
-.modal-content {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 30px;
-  border-radius: 10px;
-}
-
-.close {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-.portfolio-card img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin: 0 auto;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .navbar-brand {
-    font-size: 1.5rem;
-  }
-
-  .navbar-nav {
-    text-align: center;
-  }
-
-  .hero-section {
-    padding: 60px 0;
-    text-align: center;
-  }
-
-  .hero-section .col-md-6 {
-    margin-bottom: 20px;
-  }
-
-  .about-img,
-  .profile-img {
-    max-width: 100%;
-  }
-
-  .education-img {
-    max-width: 100%;
-  }
-
-  .experience-card {
-    text-align: center;
-  }
-
-  .portfolio-item {
-    margin-bottom: 20px;
-  }
-
-  .modal-content {
-    width: 90%;
-  }
-}
-
-/* Font modern */
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #f4f4f9;
-  background-color: #1f1f1f;
-}
-
-/* aya navbar */
-.navbar {
-  background-color: #a41f28;
-  padding: 15px 0;
-  box-shadow: 0 2px 10px rgba(235, 45, 58, 0.2);
-}
-
-.nav-profile-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-  border: 2px solid #007bff;
-}
-
-.navbar-brand {
-  color: #f4f4f9;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-}
-
-.navbar-toggler {
-  border-color: #f4f4f9;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(244, 244, 249, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-.nav-link {
-  color: #f4f4f9 !important;
-  margin: 0 10px;
-  transition: color 0.3s;
-}
-
-.nav-link:hover {
-  color: #fff !important;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar-social a {
-  color: #f4f4f9;
-  margin-left: 15px;
-  transition: color 0.3s;
-}
-
-.navbar-social a:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-/* Gaya hero section */
-.hero-section {
-  background-color: #1f1f1f;
-  color: #f4f4f9;
-  padding: 100px 0;
-}
-
-.hero-section h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero-section p {
-  font-size: 1.25rem;
-}
-
-/* Gaya tombol */
-.btn-primary {
-  background-color: #a41f28;
-  border: none;
-  transition: background-color 0.3s;
-  border-color: #a41f28;
-}
-
-.btn-primary:hover {
-  background-color: #8a1a22;
-  border-color: #8a1a22;
-}
-
-/* nimasi pada portfolio item */
-.portfolio-item {
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.portfolio-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.card {
-  background-color: #2a2a2a;
-  color: #f4f4f9;
-  border: none;
-  border-color: #eb2d3a;
-}
-
-.portfolio-overlay {
-  background: rgba(164, 31, 40, 0.9);
-}
-
-/* Main content */
-main {
-  margin-left: 0;
-  width: 100%;
-  padding-top: 80px;
-}
-
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-
-  main {
-    margin-left: 0;
-    width: 100%;
-  }
-}
-
-/* Background untuk setiap section */
-/* Hero Section */
-.hero-section {
-  background: linear-gradient(135deg, #1f1f1f 25%, transparent 25%) -50px 0, linear-gradient(225deg, #1f1f1f 25%, transparent 25%) -50px 0, linear-gradient(315deg, #1f1f1f 25%, transparent 25%),
-    linear-gradient(45deg, #1f1f1f 25%, transparent 25%);
-  background-size: 100px 100px;
-  background-color: #2a2a2a;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(0, 123, 255, 0.15), rgba(0, 0, 0, 0.1));
-}
-
-/* About Section */
-.bg-light {
-  background: radial-gradient(circle at 50% 50%, #2a2a2a 0%, #1f1f1f 100%);
-  position: relative;
-}
-
-.bg-light::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23333333' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
-  opacity: 0.1;
-  z-index: 0;
-}
-
-/* Education Section */
-#education {
-  background: linear-gradient(45deg, #1f1f1f, #2a2a2a);
-  position: relative;
-}
-
-#education::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23333333' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
-/* Experience Section */
-#experience {
-  background-color: #1f1f1f;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23333333' fill-opacity='0.2'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
-/* Portfolio Section */
-#portfolio {
-  background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
-  position: relative;
-}
-
-#portfolio::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23333333' fill-opacity='0.2' fill-rule='evenodd'%3E%3Ccircle cx='10' cy='10' r='3'/%3E%3C/g%3E%3C/svg%3E");
-}
-
-/* Contact Section */
-#contact {
-  background: linear-gradient(45deg, #1f1f1f, #2a2a2a);
-  position: relative;
-}
-
-#contact::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23333333' fill-opacity='0.1' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
-/* onten tetap di atas pattern */
-section {
-  position: relative;
-}
-
-section > .container {
-  position: relative;
-  z-index: 1;
-}
-
-/* fek hover pada cards */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(235, 45, 58, 0.2);
-}
-
-/* Gradient overlay pada gambar */
-.education-img,
-.experience-card img,
-.portfolio-card img {
-  position: relative;
-}
-
-.education-img::after,
-.experience-card img::after,
-.portfolio-card img::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(0, 123, 255, 0.1), transparent);
-  pointer-events: none;
-}
-
-/* Style background yang sama untuk semua section */
+/* Reset dan seragamkan background untuk semua section */
+section,
 .hero-section,
 #about,
 #education,
 #experience,
 #portfolio,
 #contact {
-  background-color: #1f1f1f;
-  position: relative;
-  overflow: hidden;
-  color: #f4f4f9;
+  background-color: var(--primary);
   padding: 100px 0;
+  color: var(--text-primary);
 }
 
-/* Hapus semua gradient dan overlay */
-.hero-section::before,
-#about::before,
-#education::before,
-#experience::before,
-#portfolio::before,
-#contact::before {
-  display: none;
+/* Hapus semua background yang berbeda */
+.bg-light {
+  background-color: var(--primary) !important;
 }
 
-/* Media queries responsive */
-@media (max-width: 991px) {
-  .navbar-social {
-    margin-top: 15px;
-    text-align: center;
-  }
-
-  .nav-link {
-    text-align: center;
-  }
+/* Navbar styling */
+.navbar {
+  background-color: var(--dark);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-  background-color: #1f1f1f;
-  color: #f4f4f9;
-  padding: 20px 0;
-  border-top: 1px solid #2a2a2a;
+.nav-link {
+  color: var(--secondary) !important;
 }
 
-/* Ubah warna section headers */
-section h2 {
-  color: #a41f28;
+.nav-link:hover {
+  color: var(--light) !important;
+  background-color: rgba(213, 220, 230, 0.1);
 }
 
-/* Ubah warna progress bars jika ada */
-.progress-bar {
-  background-color: #a41f28;
-}
-
-/* Ubah warna form elements */
-.form-control:focus {
-  border-color: #a41f28;
-  box-shadow: 0 0 0 0.2rem rgba(164, 31, 40, 0.25);
-}
-
-/* Ubah warna modal */
-.modal-content {
-  border-color: #a41f28;
-}
-
-.close:hover {
-  color: #a41f28;
-}
-
-/* Tambahkan style untuk maps */
-.maps-container {
-  background-color: #2a2a2a;
-  padding: 15px;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 30px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.maps-container iframe {
-  border-radius: 5px;
-  width: 100%;
-  height: 400px;
+/* Style untuk cards agar kontras dengan background */
+.card,
+.contact-info-card,
+.contact-form-card,
+.maps-container,
+.portfolio-item {
+  background-color: var(--dark);
   border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--light);
+  border-color: var(--light);
+  color: var(--primary);
+}
+
+/* Form controls */
+.form-control {
+  background-color: var(--dark);
+  border: 1px solid rgba(213, 220, 230, 0.2);
+  color: var(--secondary);
+}
+
+.form-control:focus {
+  background-color: var(--dark);
+  border-color: var(--secondary);
+  color: var(--secondary);
+  box-shadow: 0 0 0 0.2rem rgba(213, 220, 230, 0.25);
+}
+
+/* Icons styling */
+.contact-item i,
+.nav-link i {
+  color: var(--secondary);
+}
+
+/* Social media icons */
+.navbar-social a {
+  color: var(--secondary);
+}
+
+.navbar-social a:hover {
+  color: var(--light);
+}
+
+/* Portfolio items */
+.portfolio-overlay {
+  background: rgba(56, 67, 89, 0.9);
+}
+
+/* Modal styling */
+.modal-content {
+  background-color: var(--dark);
+  color: var(--secondary);
+}
+
+/* Footer styling */
+footer {
+  background-color: var(--dark);
+  padding: 20px 0;
+  color: var(--text-secondary);
+  border-top: 1px solid rgba(213, 220, 230, 0.1);
+}
+
+/* Text colors */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--light);
+}
+
+/* Hover effects */
+.card:hover {
+  box-shadow: 0 0 25px rgba(213, 220, 230, 0.1);
+}
+
+/* Progress bars */
+.progress-bar {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+/* Style khusus untuk teks about me */
+#about p,
+#about .col-md-6 p,
+#about strong {
+  color: var(--text-white) !important;
+}
+
+/* Style untuk list informasi personal */
+.personal-info p,
+.personal-info strong {
+  color: var(--text-white) !important;
+}
+
+/* Style khusus untuk teks education */
+#education .card-body,
+#education .card-body p,
+#education .card-body h5,
+#education .card-text,
+#education .card-title {
+  color: #ffffff !important;
+}
+
+/* Style tambahan untuk memastikan semua teks dalam card education */
+.education-card {
+  color: #ffffff !important;
+}
+
+.education-card * {
+  color: #ffffff !important;
+}
+
+/* Override spesifik untuk teks education */
+#education .card {
+  color: #ffffff !important;
+}
+
+#education .card p {
+  color: #ffffff !important;
+}
+
+#education .card h5 {
+  color: #ffffff !important;
+}
+
+/* Style khusus untuk teks di experience section */
+#experience .card-body,
+#experience .card-text,
+#experience p,
+#experience h5,
+#experience .experience-card p,
+#experience .experience-card h5,
+#experience * {
+  color: #ffffff !important;
+}
+
+/* Tambahan untuk memastikan tidak ada style yang override */
+.experience-card .card-body p,
+.experience-card .card-text,
+.experience-text p {
+  color: #ffffff !important;
+}
+
+/* Style untuk semua teks dalam experience cards */
+.experience-card {
+  color: #ffffff !important;
+}
+
+.experience-card * {
+  color: #ffffff !important;
+}
+
+/* Style untuk teks pada portfolio overlay */
+.portfolio-overlay p,
+.portfolio-overlay h5,
+.portfolio-card .portfolio-overlay p {
+  color: #ffffff !important;
+}
+
+/* Tambahan untuk memastikan teks "Click to view details" berwarna putih */
+.portfolio-overlay .click-text,
+.portfolio-card:hover .portfolio-overlay p {
+  color: #ffffff !important;
+  opacity: 1;
+}
+
+/* Hover state */
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-card:hover .portfolio-overlay p {
+  color: #ffffff !important;
+}
+
+/* Style untuk contact information */
+.contact-info-card h4,
+.contact-info-card h6,
+.contact-info-card p,
+.contact-details h6,
+.contact-details p,
+.contact-item i {
+  color: #ffffff !important;
+}
+
+/* Style lebih spesifik untuk contact items */
+.contact-item {
+  color: #ffffff !important;
+}
+
+.contact-item .contact-details * {
+  color: #ffffff !important;
+}
+
+/* Override untuk memastikan semua teks contact berwarna putih */
+#contact .contact-info-card * {
+  color: #ffffff !important;
+}
+
+/* Style untuk icon */
+.contact-item i {
+  color: #ffffff !important;
+}
+
+/* Portfolio Section Styling */
+.portfolio-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background: var(--dark);
   transition: transform 0.3s ease;
 }
 
-.maps-container:hover iframe {
-  transform: scale(1.02);
+.portfolio-card:hover {
+  transform: translateY(-10px);
 }
 
-/* Responsive styling */
-@media (max-width: 768px) {
-  .maps-container iframe {
-    height: 300px;
-  }
-
-  .contact-info-card,
-  .contact-form-card {
-    margin-bottom: 20px;
-  }
+.portfolio-image {
+  position: relative;
+  overflow: hidden;
 }
 
-/* Style untuk contact section */
-.contact-info-card,
-.contact-form-card {
-  background-color: #2a2a2a;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  height: 100%;
+.portfolio-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.contact-item {
+.portfolio-card:hover .portfolio-image img {
+  transform: scale(1.1);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(56, 67, 89, 0.95);
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-content {
+  text-align: center;
+  padding: 20px;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.portfolio-card:hover .portfolio-content {
+  transform: translateY(0);
+}
+
+.portfolio-category {
+  display: inline-block;
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.portfolio-content h3 {
+  color: var(--text-white);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.portfolio-icons {
+  margin: 15px 0;
+}
+
+.portfolio-icons i {
+  font-size: 2rem;
+  color: var(--secondary);
+  margin: 0 10px;
+}
+
+.btn-view {
+  background: transparent;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  padding: 8px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-view:hover {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+/* Modal styling */
+.modal-content {
+  background: var(--dark);
+  border: none;
+  border-radius: 15px;
+}
+
+.modal-header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.contact-item:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
+.modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.contact-item i {
-  font-size: 20px;
-  color: #a41f28;
-  margin-right: 15px;
-  margin-top: 5px;
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
 }
 
-.contact-details h6 {
-  color: #f4f4f9;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.contact-details p {
-  color: #f4f4f9;
-  margin-bottom: 0;
+.tech-badge {
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 5px 15px;
+  border-radius: 20px;
   font-size: 0.9rem;
 }
 
-/* Style untuk maps */
-.maps-container {
-  background-color: #2a2a2a;
-  padding: 10px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.maps-container iframe {
-  border-radius: 5px;
-  width: 100%;
-  border: none;
-  transition: transform 0.3s ease;
-}
-
-.maps-container:hover iframe {
-  transform: scale(1.02);
-}
-
-/* Style untuk form */
-.form-control {
-  background-color: #1f1f1f;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #f4f4f9;
-  padding: 12px;
-}
-
-.form-control:focus {
-  background-color: #1f1f1f;
-  color: #f4f4f9;
-  border-color: #a41f28;
-  box-shadow: 0 0 0 0.2rem rgba(164, 31, 40, 0.25);
-}
-
-/* Responsive styling */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .contact-info-card {
-    margin-bottom: 30px;
+  .portfolio-image img {
+    height: 250px;
   }
 
-  .maps-container {
-    margin-top: 20px;
+  .portfolio-content h3 {
+    font-size: 1.2rem;
   }
 }

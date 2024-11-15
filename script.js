@@ -1,95 +1,132 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth',
+// Smooth scrolling untuk navigasi
+const initSmoothScroll = () => {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+      });
     });
   });
-});
+};
 
-// Contact form submission
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  // Add your form submission logic here
-  alert('Message sent successfully!');
-  this.reset();
-});
+// Handle form submission
+const initContactForm = () => {
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Message sent successfully!');
+    this.reset();
+  });
+};
 
-// Data portfolio
+// Data portfolio projects
 const portfolioData = {
   1: {
-    title: 'Project 1',
+    title: 'UI/UX Design Project',
     image: '/img/Exp1.png',
-    description: '✨UI/UX Designer',
+    description: '✨UI/UX Designer with expertise in creating intuitive and engaging user interfaces',
+    category: 'UI/UX Design',
     technologies: ['Figma'],
     link: 'https://github.com/link-project-1',
+    preview: 'https://yoursite.com/preview-1',
   },
   2: {
-    title: 'Project 2',
+    title: 'Youtube Thumbnail Design',
     image: '/img/Exp2.png',
-    description: '✏️Youtube Thumbnail Editor',
+    description: '✏️Professional Youtube Thumbnail Editor with creative design skills',
+    category: 'Graphic Design',
     technologies: ['Canva'],
     link: 'https://github.com/link-project-2',
+    preview: 'https://yoursite.com/preview-2',
   },
   3: {
-    title: 'Project 3',
+    title: 'Video Editing Project',
     image: '/img/Exp3.png',
-    description: '🎥Video Editor',
+    description: '🎥Professional Video Editor with expertise in creating engaging content',
+    category: 'Video Editing',
     technologies: ['Filmora13'],
     link: 'https://github.com/link-project-3',
+    preview: 'https://yoursite.com/preview-3',
   },
   4: {
-    title: 'Project 4',
+    title: 'Fast Typing Skills',
     image: '/img/Exp4.png',
-    description: '⌨️Fast Typing 90WPM🔥',
-    technologies: ['https://10fastfingers.com/typing-test/indonesian'],
-    link: 'https://github.com/link-project-4',
+    description: '⌨️Professional Fast Typing with 90 Words Per Minute speed',
+    category: 'Skills',
+    technologies: ['10FastFingers'],
+    link: 'https://10fastfingers.com/typing-test/indonesian',
+    preview: 'https://10fastfingers.com/typing-test/indonesian',
   },
   5: {
-    title: 'Project 5',
+    title: 'Video Editing Project 2',
     image: '/img/Exp5.png',
-    description: '🎥Video Editor',
+    description: '🎥Advanced Video Editing with professional tools and techniques',
+    category: 'Video Editing',
     technologies: ['Filmora13'],
     link: 'https://github.com/link-project-5',
+    preview: 'https://yoursite.com/preview-5',
   },
 };
 
-// Portfolio item click handler
-document.querySelectorAll('.portfolio-item').forEach((item, index) => {
-  item.addEventListener('click', function () {
-    const projectId = index + 1;
-    const project = portfolioData[projectId];
-
-    const modal = document.getElementById('portfolioModal');
-    const modalContent = document.getElementById('modalContent');
-
-    modalContent.innerHTML = `
-      <h2>${project.title}</h2>
-      <img src="${project.image}" alt="${project.title}" style="max-width: 100%; margin: 20px 0;">
-      <p>${project.description}</p>
-      <h4>Technologies Used:</h4>
-      <ul>
-        ${project.technologies.map((tech) => `<li>${tech}</li>`).join('')}
-      </ul>
+// Generate modal content
+const generateModalContent = (project) => {
+  return `
+    <div class="modal-header">
+      <h2 class="modal-title">${project.title}</h2>
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img src="${project.image}" alt="${project.title}" class="img-fluid rounded mb-4">
+      <span class="portfolio-category">${project.category}</span>
+      <p class="mt-3">${project.description}</p>
+      <h4 class="mt-4">Technologies Used:</h4>
+      <div class="tech-stack">
+        ${project.technologies.map((tech) => `<span class="tech-badge">${tech}</span>`).join('')}
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="${project.preview}" target="_blank" class="btn btn-secondary">Live Preview</a>
       <a href="${project.link}" target="_blank" class="btn btn-primary">View Project</a>
-    `;
+    </div>
+  `;
+};
 
-    modal.style.display = 'block';
+// Initialize portfolio modal handlers
+const initPortfolioModal = () => {
+  // Portfolio item click handler
+  document.querySelectorAll('.portfolio-item').forEach((item, index) => {
+    item.addEventListener('click', function () {
+      const projectId = index + 1;
+      const project = portfolioData[projectId];
+      const modal = document.getElementById('portfolioModal');
+      const modalContent = document.getElementById('modalContent');
+
+      modalContent.innerHTML = generateModalContent(project);
+      modal.style.display = 'block';
+    });
   });
-});
 
-// Tambahkan fungsi untuk menutup modal
-document.querySelector('.close').onclick = function () {
-  document.getElementById('portfolioModal').style.display = 'none';
+  // Close modal when clicking the close button
+  document.querySelector('.close').onclick = function () {
+    document.getElementById('portfolioModal').style.display = 'none';
+  };
+
+  // Close modal when clicking outside
+  window.onclick = function (event) {
+    const modal = document.getElementById('portfolioModal');
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  };
 };
 
-// Menutup modal jika user mengklik di luar modal
-window.onclick = function (event) {
-  const modal = document.getElementById('portfolioModal');
-  if (event.target == modal) {
-    modal.style.display = 'none';
-  }
+// Initialize all functionality
+const initializeApp = () => {
+  initSmoothScroll();
+  initContactForm();
+  initPortfolioModal();
+  console.log('Application initialized successfully!');
 };
 
-console.log('JavaScript file connected!');
+// Start the application
+document.addEventListener('DOMContentLoaded', initializeApp);
