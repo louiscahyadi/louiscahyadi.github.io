@@ -73,7 +73,7 @@ const generateModalContent = (project) => {
   return `
     <div class="modal-header">
       <h2 class="modal-title">${project.title}</h2>
-      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <button type="button" class="close" aria-label="Close">&times;</button>
     </div>
     <div class="modal-body">
       <img src="${project.image}" alt="${project.title}" class="img-fluid rounded mb-4">
@@ -93,23 +93,32 @@ const generateModalContent = (project) => {
 
 // Initialize portfolio modal handlers
 const initPortfolioModal = () => {
-  // Portfolio item click handler
-  document.querySelectorAll('.portfolio-item').forEach((item, index) => {
-    item.addEventListener('click', function () {
-      const projectId = index + 1;
+  // Portfolio button click handler
+  document.querySelectorAll('.btn-view').forEach((button) => {
+    button.addEventListener('click', function () {
+      const projectId = this.getAttribute('data-project');
       const project = portfolioData[projectId];
       const modal = document.getElementById('portfolioModal');
       const modalContent = document.getElementById('modalContent');
 
       modalContent.innerHTML = generateModalContent(project);
       modal.style.display = 'block';
+
+      // Panggil ulang event listener untuk tombol tutup
+      document.querySelectorAll('.close').forEach((closeBtn) => {
+        closeBtn.addEventListener('click', closeModal);
+      });
     });
   });
 
   // Close modal when clicking the close button
-  document.querySelector('.close').onclick = function () {
+  const closeModal = () => {
     document.getElementById('portfolioModal').style.display = 'none';
   };
+
+  document.querySelectorAll('.close').forEach((closeBtn) => {
+    closeBtn.addEventListener('click', closeModal);
+  });
 
   // Close modal when clicking outside
   window.onclick = function (event) {
@@ -118,6 +127,13 @@ const initPortfolioModal = () => {
       modal.style.display = 'none';
     }
   };
+
+  // Tambahkan event listener untuk tombol ESC
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      document.getElementById('portfolioModal').style.display = 'none';
+    }
+  });
 };
 
 // Initialize all functionality
